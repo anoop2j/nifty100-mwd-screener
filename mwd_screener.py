@@ -1,6 +1,7 @@
 import pandas as pd
 import yfinance as yf
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import os
 import time
 
@@ -399,9 +400,12 @@ def load_symbols():
 def generate_html(results):
 
 
-    current_time = datetime.now().strftime(
-        "%d-%b-%Y %I:%M %p"
+   ist = ZoneInfo("Asia/Kolkata")
+
+    current_time = datetime.now(ist).strftime(
+        "%d-%b-%Y %I:%M %p IST"
     )
+
 
 
     total_stocks = len(results)
