@@ -399,14 +399,15 @@ def load_symbols():
 
 def generate_html(results):
 
+    # ========================================================
+    # CURRENT TIME IN IST
+    # ========================================================
 
-   ist = ZoneInfo("Asia/Kolkata")
+    ist = ZoneInfo("Asia/Kolkata")
 
     current_time = datetime.now(ist).strftime(
         "%d-%b-%Y %I:%M %p IST"
     )
-
-
 
     total_stocks = len(results)
 
